@@ -36,6 +36,11 @@ public class Ui {
         System.out.println(line);
     }
 
+    /**
+     * This method prints the strings of text from 's' with the proper format.
+     *
+     * @param s Strings containing the messages to be printed.
+     */
     public static void printMsg(String... s) {
         final StringBuilder messageAccumulator = new StringBuilder();
         for (String str: s) {
@@ -65,18 +70,27 @@ public class Ui {
         printMsg(msg);
     }
 
+    /**
+     * Prints a date format error message in the proper format
+     */
     public static void printDateTimeFormatError() {
         System.out.println(line);
         System.out.println("Please use the format 'DD/MM/YYYY HHmm'!");
         System.out.println(line);
     }
 
+    /**
+     * Prints a datetime format error message in the proper format
+     */
     public static void printDateFormatError() {
         System.out.println(line);
         System.out.println("\tPlease use the format 'DD/MM/YYYY'!");
         System.out.println(line);
     }
 
+    /**
+     * Prints an invalid duration error message in the proper format
+     */
     public static void printFixDurationTaskError() {
         System.out.println(line);
         System.out.println("\tSorry, please enter a valid fixed duration task.");

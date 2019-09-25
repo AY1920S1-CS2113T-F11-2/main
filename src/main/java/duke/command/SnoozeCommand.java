@@ -9,10 +9,21 @@ import duke.task.TaskList;
 
 import java.time.LocalDateTime;
 
+
+/**
+ * A command used to snooze tasks.
+ */
 public class SnoozeCommand extends Command {
+
     protected String taskNumStr;
     protected String newDateStr;
 
+    /**
+     * Instantiates a new Snooze command.
+     *
+     * @param taskNumStr the task num str
+     * @param newDateStr the new date str
+     */
     public SnoozeCommand(String taskNumStr, String newDateStr) {
         this.taskNumStr = taskNumStr;
         this.newDateStr = newDateStr;
@@ -53,6 +64,13 @@ public class SnoozeCommand extends Command {
         }
     }
 
+    /**
+     * Checks that the new date to snooze until is after the current task date
+     *
+     * @param oldTask the old task
+     * @param newTask the new task
+     * @return true if new date is after old date, else false
+     */
     public boolean newDateIsAfter(Task oldTask, Task newTask) {
         LocalDateTime oldDate = oldTask.getDate();
         LocalDateTime newDate = newTask.getDate();

@@ -9,11 +9,19 @@ import java.util.Comparator;
 
 import duke.Time;
 
+/**
+ * The type View schedule command, used to view schedules.
+ */
 public class ViewScheduleCommand extends Command {
 
     protected LocalDate viewDate;
     protected String dateStr;
 
+    /**
+     * Instantiates a new View schedule command.
+     *
+     * @param dateStr the date str
+     */
     public ViewScheduleCommand(String dateStr) {
         if (dateStr.equals("today")) {
             viewDate = LocalDate.now();
