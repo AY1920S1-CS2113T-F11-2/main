@@ -112,13 +112,16 @@ public class Task {
      * Gets task type.
      *
      * @return the task type
-     */
-    public char getTaskType() { return type; }
-
+     */  
+    public char getTaskType() {
+        return type;
+    }
     /**
      * Gets task description.
      *
      * @return the task description
      */
-    public String getTaskDescription() { return description; }
+    public String getTaskDescription() {
+        return description;
+    }
 }
