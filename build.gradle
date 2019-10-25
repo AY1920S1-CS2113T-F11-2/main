@@ -7,6 +7,15 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '5.1.0'
 }
 
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination file("${buildDir}/jacocoHtml")
+    }
+}
+
 checkstyle {
     toolVersion = '8.23'
 }
